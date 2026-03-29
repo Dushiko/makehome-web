@@ -27,12 +27,12 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
     const formData = new FormData(form);
 
     const payload = {
-      fullName: String(formData.get("fullName") ?? ""),
+      name: String(formData.get("name") ?? ""),
       agency: String(formData.get("agency") ?? ""),
       email: String(formData.get("email") ?? ""),
       phone: String(formData.get("phone") ?? ""),
       location: String(formData.get("location") ?? ""),
-      propertyDescription: String(formData.get("propertyDescription") ?? ""),
+      description: String(formData.get("description") ?? ""),
       company_website: String(formData.get("company_website") ?? ""),
     };
 
@@ -104,7 +104,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
       noValidate
     >
       <div
-        className="pointer-events-none absolute -left-[10000px] h-0 w-0 overflow-hidden opacity-0"
+        className="pointer-events-none absolute -left-[10000px] top-0 h-px w-px overflow-hidden opacity-0"
         aria-hidden
       >
         <label htmlFor="company_website">Web společnosti</label>
@@ -118,12 +118,12 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
       </div>
 
       <div>
-        <label htmlFor="fullName" className={labelClass}>
-          Jméno a příjmení
+        <label htmlFor="name" className={labelClass}>
+          Jméno
         </label>
         <input
-          id="fullName"
-          name="fullName"
+          id="name"
+          name="name"
           type="text"
           required
           autoComplete="name"
@@ -144,7 +144,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
       </div>
       <div>
         <label htmlFor="email" className={labelClass}>
-          E-mail
+          Email
         </label>
         <input
           id="email"
@@ -169,7 +169,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
       </div>
       <div>
         <label htmlFor="location" className={labelClass}>
-          Místo realizace stagingu
+          Místo
         </label>
         <input
           id="location"
@@ -180,12 +180,12 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
         />
       </div>
       <div>
-        <label htmlFor="propertyDescription" className={labelClass}>
-          Popis nemovitosti
+        <label htmlFor="description" className={labelClass}>
+          Popis
         </label>
         <textarea
-          id="propertyDescription"
-          name="propertyDescription"
+          id="description"
+          name="description"
           rows={5}
           className={inputClass}
         />
