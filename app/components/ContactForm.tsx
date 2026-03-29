@@ -5,10 +5,10 @@ import { useState, type FormEvent } from "react";
 type Status = "idle" | "loading" | "success" | "error";
 
 const inputClass =
-  "w-full rounded-xl border border-black/[0.08] bg-white px-4 py-3.5 text-neutral-900 shadow-sm outline-none transition focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10";
+  "w-full rounded-lg border border-black/[0.08] bg-white px-3 py-2.5 text-sm text-neutral-900 shadow-sm outline-none transition focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10";
 
 const labelClass =
-  "mb-2 block text-xs font-semibold uppercase tracking-wider text-neutral-600";
+  "mb-1 block text-[0.65rem] font-semibold uppercase tracking-wider text-neutral-600";
 
 type ContactFormProps = {
   submitClassName: string;
@@ -79,19 +79,19 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
   if (status === "success") {
     return (
       <div
-        className="rounded-2xl border border-black/[0.06] bg-[#FAF8F4] p-8 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.1)] sm:p-10"
+        className="rounded-xl border border-black/[0.06] bg-[#FAF8F4] p-5 sm:p-6"
         role="status"
         aria-live="polite"
       >
-        <p className="text-lg font-medium leading-relaxed text-neutral-800">
+        <p className="text-base font-medium leading-snug text-neutral-800">
           Děkujeme, ozveme se vám co nejdříve.
         </p>
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-8 text-sm font-semibold text-neutral-900 underline-offset-4 hover:underline"
+          className="mt-4 text-sm font-semibold text-neutral-900 underline-offset-2 hover:underline"
         >
-          Odeslat další zprávu
+          Další zpráva
         </button>
       </div>
     );
@@ -99,7 +99,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
 
   return (
     <form
-      className="relative space-y-6 rounded-2xl border border-black/[0.06] bg-[#FAF8F4] p-8 shadow-[0_16px_48px_-20px_rgba(0,0,0,0.1)] sm:p-10"
+      className="relative space-y-4 rounded-xl border border-black/[0.06] bg-[#FAF8F4] p-5 sm:p-6"
       onSubmit={handleSubmit}
       noValidate
     >
@@ -186,7 +186,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
         <textarea
           id="description"
           name="description"
-          rows={5}
+          rows={4}
           className={inputClass}
         />
       </div>
