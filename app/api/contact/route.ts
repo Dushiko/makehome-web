@@ -41,10 +41,6 @@ export async function POST(request: Request) {
     }
 
     const record = body as Record<string, unknown>;
-    const honeypot = asTrimmedString(record.company_website);
-    if (honeypot.length > 0) {
-      return NextResponse.json({ success: true });
-    }
 
     const name = asTrimmedString(record.name ?? record.fullName);
     const company = asTrimmedString(record.agency);
@@ -75,6 +71,16 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    console.log("[contact] Request data:", {
+      name,
+      company,
+      email,
+      phone,
+      location,
+      message,
+      rawKeys: Object.keys(record),
+    });
 
     const apiKey = process.env.RESEND_API_KEY?.trim();
     if (!apiKey) {
