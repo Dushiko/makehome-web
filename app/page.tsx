@@ -1,3 +1,4 @@
+import { BeforeAfterSlider } from "./components/BeforeAfterSlider";
 import { ContactForm } from "./components/ContactForm";
 
 const btnPrimary =
@@ -148,23 +149,11 @@ export default function Home() {
             <h2 id="realizace-heading" className={h2}>
               Před / Po
             </h2>
-            <div className="mt-2 grid grid-cols-2 gap-1.5 sm:mt-3 sm:gap-2.5">
-              <div
-                className="flex aspect-[4/3] items-center justify-center rounded-lg border border-dashed border-neutral-300 bg-[#F5F0E8] text-center sm:rounded-xl"
-                aria-label="Místo pro fotografii před"
-              >
-                <span className="px-2 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-neutral-400 sm:text-[0.65rem]">
-                  Před
-                </span>
-              </div>
-              <div
-                className="flex aspect-[4/3] items-center justify-center rounded-lg border border-black/[0.08] bg-neutral-100 text-center sm:rounded-xl"
-                aria-label="Místo pro fotografii po"
-              >
-                <span className="px-2 text-[0.6rem] font-semibold uppercase tracking-[0.18em] text-neutral-500 sm:text-[0.65rem]">
-                  Po
-                </span>
-              </div>
+            <div className="mt-2 w-full sm:mt-2.5">
+              <BeforeAfterSlider
+                beforeSrc="/IMAGES/PREDPO/001_pred.jpeg"
+                afterSrc="/IMAGES/PREDPO/001_po.jpg"
+              />
             </div>
             <p className="mt-2 text-[0.8125rem] leading-snug text-neutral-600 sm:text-sm">
               Více kliků, lepší fotky, vyšší šance na prohlídku.
