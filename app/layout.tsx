@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MAKE HOME – Home staging a příprava nemovitostí",
+  title: "MAKE HOME – Home staging pro makléře a developery",
   description:
-    "Připravíme nemovitost tak, aby zaujala na první pohled a prodala se rychleji i za lepší cenu.",
+    "Staging a příprava k focení. Rychlejší prodej, silnější inzerát.",
 };
 
 export default function RootLayout({

@@ -5,7 +5,7 @@ import { useState, type FormEvent } from "react";
 type Status = "idle" | "loading" | "success" | "error";
 
 const inputClass =
-  "w-full rounded-lg border border-black/[0.08] bg-white px-3 py-2.5 text-sm text-neutral-900 shadow-sm outline-none transition focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10";
+  "w-full rounded-lg border border-black/[0.08] bg-white px-3 py-2 text-sm text-neutral-900 shadow-sm outline-none transition focus:border-neutral-900 focus:ring-2 focus:ring-neutral-900/10";
 
 const labelClass =
   "mb-1 block text-[0.65rem] font-semibold uppercase tracking-wider text-neutral-600";
@@ -79,7 +79,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
   if (status === "success") {
     return (
       <div
-        className="rounded-xl border border-black/[0.06] bg-[#FAF8F4] p-5 sm:p-6"
+        className="rounded-lg border border-black/[0.06] bg-[#FAF8F4] p-4 sm:p-5"
         role="status"
         aria-live="polite"
       >
@@ -89,7 +89,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-4 text-sm font-semibold text-neutral-900 underline-offset-2 hover:underline"
+          className="mt-3 text-sm font-semibold text-neutral-900 underline-offset-2 hover:underline"
         >
           Další zpráva
         </button>
@@ -99,7 +99,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
 
   return (
     <form
-      className="relative space-y-4 rounded-xl border border-black/[0.06] bg-[#FAF8F4] p-5 sm:p-6"
+      className="relative space-y-3 rounded-lg border border-black/[0.06] bg-[#FAF8F4] p-4 sm:p-5"
       onSubmit={handleSubmit}
       noValidate
     >
@@ -186,7 +186,7 @@ export function ContactForm({ submitClassName }: ContactFormProps) {
         <textarea
           id="description"
           name="description"
-          rows={4}
+          rows={3}
           className={inputClass}
         />
       </div>
