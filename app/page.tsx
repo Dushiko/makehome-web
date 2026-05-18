@@ -77,7 +77,7 @@ export default function Home() {
               id="hero-heading"
               className="mt-1.5 text-[1.25rem] font-semibold leading-[1.15] tracking-tight text-neutral-900 sm:mt-2 sm:text-2xl lg:text-[1.65rem]"
             >
-              <span className="block">Neinzerujte dům.</span>
+              <span className="block">test - Neinzerujte dům.</span>
               <span className="block">Inzerujte domov.</span>
             </h1>
             <p className="mx-auto mt-2 max-w-[18rem] text-[0.8125rem] leading-snug text-neutral-600 sm:mx-0 sm:mt-2.5 sm:max-w-sm sm:text-sm">
